@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+    <div class="content">
+        <div id="acceso">
+            <form name="login" action="/login" method="POST">
+                <label for="nombreUser">Nombre de Usuario</label></br>
+                <input type="text" placeholder="Nombre de usuario" id="uname" name="uname"><br/>
+                <label for="contraseña">Contraseña</label></br>
+                <input type="password" placeholder="contraseña" id="passw" name="passw"><br/>
+
+                <input type="submit" value="Iniciar sesión" />
+                <p>No estás registrado?&nbsp;<a href="/register">Login</a></p>
+            </form>
+        </div>
+    </div>
+</article>
+{% endblock %}

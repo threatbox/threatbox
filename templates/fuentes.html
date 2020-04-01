@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta lang="es" charset="utf-8">
+    <title>ThreatBox_</title>
+    <link href="../static/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header id="main-header">
+        <a id="logo-header" href="/">
+            <span class="site-name">ThreatBox_</span>
+            <span class="site-desc">Ciber Threat Repository</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/upload">repo</a></li>
+                <li><a href="/acceso">&#8635;&nbsp;&nbsp;login</a></li>
+                <li><a href="/register">sing up</a></li>
+                <li><a href="/about">about</a></li>
+				{% for dato in datos %}
+				<li>{{ dato.uname }}</li>
+				{% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <section id="main-content">
+        <article>
+            {% block content %}
+            <h1>fuente añadida correctamete</h1>
+            <li><a href="/upload">>seguir catalogando>>></a></li>
+            {% endblock %}
+        </article>
+    </section>
+    <footer id="main-footer">
+        <p>&COPY;&nbsp;ThreatBox_&nbsp;2020&nbsp;&nbsp;&VerticalSeparator;&nbsp;&nbsp;<a
+                href="mailto:adrian.cripto@gmail.com">adrian.cripto@gmail.com</a></p>
+    </footer>
+</body>
+
+</html>

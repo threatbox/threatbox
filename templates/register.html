@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+    <div class="content">
+        <div id="acceso">
+            <form action="/register_user" method="post">
+                <label for="username">Nombre de Usuario</label></br>
+                <input type="text" placeholder="nombre de usuario" id="uname" name="uname"><br/>
+                <label for="contraseña">Email</label></br>
+                <input type="text" placeholder="email" id="email" name="email"><br/>
+                <label for="contraseña">Contraseña</label></br>
+                <input type="password" placeholder="contraseña" id="passw" name="passw"><br/>
+
+                <input type="submit" value="Registrarse" />
+                <p>Ya estás registrado?&nbsp;<a href="#">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+</article>
+{% endblock %}

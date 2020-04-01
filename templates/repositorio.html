@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="content">
+    <form action="/update" method="post">
+        <div id="filas">
+            <div class="col col2">
+                <h3>Categoría</h3>
+                <p><select name="categoria" id="categoria">
+                        <option disabled="">Seleccionar categoría ...</option>
+                        <option>&nbsp;</option>
+                        <option id="catTerro">Terrorismo</option>
+                        <option id="catLeak">Data Leak</option>
+                        <option id="catHack">Hacking</option>
+                        <option id="catCibcri">Cibercrimen</option>
+                        <option id="catFrau">Fraude</option>
+                        <option id="catCibame">Ciberamenazas</option>
+                    </select></p>
+            </div>
+            <div class="col col2">
+                <h3>Subcategoría</h3>
+                <p><select name="subcategoria" id="subcategoria">
+                        <option disabled="">Seleccionar subcategoría ...</option>
+                        <option>&nbsp;</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select></p>
+            </div>
+        </div>
+        <div id="limpiado"></div>
+        <div id="filas">
+            <div class="col col2">
+                <h3>Fuente</h3>
+                <p><input type="text" name="fuente" value="" id="source" placeholder="Introduzca nombre de la fuente ..." /></p>
+            </div>
+            <div class="col col2">
+                <h3>Ubicación de la fuente</h3>
+                <p><select name="ubicacion" id="ubicacion">
+                        <option disabled="">Introduzca ubicación de la fuente ...</option>
+                        <option>&nbsp;</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select></p>
+            </div>
+        </div>
+        <div id="limpiado"></div>
+        <div id="filas">
+            <div class="col col2">
+                <h3>Dirección web de la fuente</h3>
+                <p><input type="text" name="direccion" value="" id="fueUrl" placeholder="Introduzca url de la fuente ..." /></p>
+            </div>
+        </div>
+        <div id="limpiado"></div>
+        <div id="filas">
+            <div class="col col3">
+                <h3>Darknet</h3>
+                <p><input type="radio" name="darknet" value="Si" id="darkSi" />&nbsp;SI&nbsp;&nbsp;<input type="radio" name="darknet" value="No" id="darkNo" />&nbsp;NO</p>
+            </div>
+            <div class="col col3">
+                <h3>Tipo de darknet</h3>
+                <p><select name="tipo">
+                        <option disabled="">Tipo de darknet ...</option>
+                        <option>&nbsp;</option>
+                        <option id="darkFree">Freenet</option>
+                        <option id="darkI2p">i2p</option>
+                        <option id="darkGnu">GNUnet</option>
+                        <option id="darkEntro">Entropy</option>
+                        <option id="darkAnt">ANts P2P</option>
+                        <option id="darkTor">Tor</option>
+                    </select></p>
+            </div>
+            <div class="col col3">
+                <h3>Idioma</h3>
+                <p><select name="idioma">
+                        <option disabled="">Seleccionar idioma ...</option>
+                        <option>&nbsp;</option>
+                        <option id="idiAle">Alemán</option>
+                        <option id="idiAra">Árabe</option>
+                        <option id="idiChi">Chino</option>
+                        <option id="idiCro">Croata</option>
+                        <option id="idiEsp">Español</option>
+                        <option id="idiFran">Francés</option>
+                        <option id="idiGrie">Griego</option>
+                        <option id="idiHol">Holandés</option>
+                        <option id="idiInd">Indonesio</option>
+                        <option id="idiIng">Inglés</option>
+                        <option id="idiIta">Italiano</option>
+                        <option id="idiJap">Japonés</option>
+                        <option id="idiPol">Polaco</option>
+                        <option id="idiPor">Portugués</option>
+                        <option id="idiRus">Ruso</option>
+                        <option id="idiSue">Sueco</option>
+                        <option id="idiTur">Turco</option>
+                        <option id="idiUcr">Ucraniano</option>
+                    </select></p>
+            </div>
+            <div id="limpiado"></div>
+            <div id="filas">
+                <div class="col col3">
+                    <h3>Nivel de actividad</h3>
+                    <p><select name="nivel">
+                            <option disabled="">Indicar nivel de actividad ...</option>
+                            <option>&nbsp;</option>
+                            <option id="actAlt">Alta</option>
+                            <option id="actMed">Media</option>
+                            <option id="actBaj">Baja</option>
+                        </select></p>
+                </div>
+                <div class="col col3">
+                    <h3>Invitación</h3>
+                    <p><input type="radio" name="invitacion" value="Si" id="Si" />&nbsp;SI&nbsp;&nbsp;<input type="radio" name="invitacion" value="No" id="No" />&nbsp;NO</p>
+                </div>
+                <div class="col col3">
+                    <h3>Score de fiabilidad</h3>
+                    <p><input type="radio" name="fiabilidad" value="0" id="0" checked >&nbsp;0&nbsp;
+                        <input type="radio" name="fiabilidad" value="1" id="1" >&nbsp;1&nbsp;
+                        <input type="radio" name="fiabilidad" value="2" id="2" >&nbsp;2&nbsp;
+                        <input type="radio" name="fiabilidad" value="3" id="3" >&nbsp;3&nbsp;
+                        <input type="radio" name="fiabilidad" value="4" id="4" >&nbsp;4&nbsp;
+                        <input type="radio" name="fiabilidad" value="5" id="5" >&nbsp;5</p>
+                </div>
+            </div>
+        </div>
+        <div id="subir">
+            <input type="submit" value="Subir" />
+        </div>
+    </form>
+</article>
+{% endblock %}

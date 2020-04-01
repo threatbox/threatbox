@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+    <div class="banner">
+        <p>Accede</p>
+        <b>
+            <div class="innerbanner">
+                a fuentes<br /> 
+                catalogadas y<br />
+                categorizadas<br />
+                de amenazas<br />
+                online
+            </div>
+        </b>
+    </div>
+    <div class="content">
+        <form action="/" method="GET">
+            <div id="buscador">
+                <input type="text" name="busca" value="{{ busca }}" /><input type="submit" value="SEARCH" />
+            </div>
+        </form>
+
+        <ul>
+            {% for dato in datos %}
+            <li>{{ dato.uname }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</article>
+{% endblock %}

@@ -1,0 +1,378 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #666;
+    background: #f2f2f2; 
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 70px; /* Relleno superior igual a la altura de la cabecera*/
+    background-image: url("../static/bg.png");
+}
+#main-header {
+    background: #333;
+    color: #fff;
+    height: 70px;	
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}	
+#main-header a {color: #fff;}
+
+/*
+ * Logo
+ */
+#logo-header {
+    float: left;
+    padding: 15px 0 0 20px;
+    text-decoration: none;
+}
+
+#logo-header .site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.7em;
+}
+#logo-header .site-name:hover{color: #e0e0e0;}
+#logo-header .site-desc {
+    display: block;
+    font-weight: 300;
+    font-size: 0.9em;
+    color: #999;
+}
+
+
+/*
+ * Navegación
+ */
+nav {
+    float: right;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+}
+nav ul li a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background: #3f3f3f;
+}
+#main-content {
+    background: #fff;
+    width: 90%;
+    max-width: 1024px;
+    min-height: 800px;
+    margin: 0px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+#main-content header,
+#main-content .content {
+    padding: 40px;
+}
+#main-content header h1{color: #cc0000; font-size: 27px;}
+
+#buscador{
+    width: 700px;
+    margin: auto;
+    padding-top: 25%;
+}
+
+#buscador input[type=text]{
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    padding: 21px 15px;
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+    margin: 0;
+    width: 568px;
+    font-weight: bold;
+}
+#buscador input:focus[type=text]{box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+#buscador input:hover[type=text]{box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+#buscador input[type=submit]{
+    display: inline-block;
+    margin-top: 7px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 21px 15px;
+    border: 1px solid #333;
+    border-bottom-right-radius: 11px;
+    border-top-right-radius: 11px;
+    width: 100px;
+    font-weight: bolder;
+}
+#buscador input:hover[type=submit]{color: #cc0000;}
+
+#main-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+}
+#main-footer p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+#main-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+#main-footer a:hover {color: #cc0000;}
+
+#filas .col{
+    float: left;
+    display: block;
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+}
+#filas .col:first-child {margin-left: 0;}
+#filas .col2{width: 47.35%;}
+#filas .col3{width: 29%;}
+#filas .col4{width: 18%;}
+#filas .col h3{
+    text-align: left;
+    size: 21px;
+    color: #000;
+    font-weight: lighter;
+    /*line-height: 33px;*/
+    margin-top: 0px;
+}
+#filas .col p{
+    size: 21px;
+    color: #000;
+    font-weight: bolder;
+    /*line-height: 33px;*/
+}
+
+#filas select{
+    background-image: url(../static/abajo.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 15px;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    font-family: monospace;
+    font-weight: bolder;
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 11px;
+    margin-top: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+select::-ms-expand {display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/}
+
+#filas input[type=text]{
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    font-family: monospace;
+    font-weight: bolder;
+    width: 97%;
+    border-radius: 5px;
+    padding: 8px 11px;
+    margin-top: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+#filas input[type=radio]{
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #17a2b8;
+    padding: 8px;
+    margin-top: 0px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+#filas input:checked[type=radio]{
+    background-color: #cc0000;
+    border-radius: 50%;
+}
+
+#subir input[type=submit]{
+    display: inline-block;
+    margin-left: 45%;
+    margin-right: 55%;
+    margin-top: 37px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 11px 15px;
+    border-radius: 7px;
+    width: 100px;
+    font-weight: bolder;
+}
+#subir input:hover[type=submit]{
+    display: inline-block;
+    margin-left: 45%;
+    margin-right: 55%;
+    margin-top: 37px;
+    background-color: #333;
+    color: #cc0000;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 11px 15px;
+    border-radius: 7px;
+    width: 100px;
+    font-weight: bolder;
+}
+
+#acceso{
+    width: 500px;
+    margin: auto;
+    border: 1px solid #333;
+    border-radius: 11px;
+    padding: 3%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#acceso input[type=text]{
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    padding: 11px 15px;
+    border-radius: 7px;
+    margin: 7px 0 7px 0;
+    width: 94%;
+    font-weight: bold;
+}
+#acceso input[type=password]{
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    padding: 11px 15px;
+    border-radius: 7px;
+    margin: 7px 0 7px 0;
+    width: 94%;
+}
+#acceso input[type=submit]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 7px;
+    min-width: 50px;
+    font-weight: bolder;
+}
+#acceso input:hover[type=submit]{color: #cc0000;}
+#acceso label{
+    color: #333;
+    font-weight: bolder;
+    font-weight: lighter;
+}
+
+.banner {
+  padding: 0em 5em;
+  font: lighter 40px/50px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+  color: #999;
+}
+.banner p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.banner b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+.banner b .innerbanner {
+  display: inline-block;
+  color: #e74c3c;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 5s;
+   -moz-animation:move 5s;
+    -ms-animation:move 5s;
+     -o-animation:move 5s;
+        animation:move 5s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+@keyframes move{
+0%  { top: 0px; }
+20% { top: -50px; }
+40% { top: -100px; }
+60% { top: -150px; }
+80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+
+#limpiado{clear: both;}
