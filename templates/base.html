@@ -15,13 +15,12 @@
         </a>
         <nav>
             <ul>
-                <li><a href="{{ url_for('buscar') }}">repositorio</a></li>
-                <li><a href="{{ url_for('upload') }}">Alta</a></li>
+                <li><a href="{{ url_for('upload') }}">repositorio</a></li>
                 <li><a href="{{ url_for('login') }}">&#8635;&nbsp;&nbsp;login</a></li>
                 <li><a href="{{ url_for('register') }}">sing up</a></li>
                 <li><a href="{{ url_for('about') }}">about</a></li>
 				{% for dato in datos %}
-				<li>&#9762;&nbsp;&nbsp;{{ dato.name }}</li>
+				<!--<li>&#9762;&nbsp;&nbsp;{{ dato.name }}</li>-->
 				{% endfor %}
             </ul>
         </nav>
