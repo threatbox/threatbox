@@ -15,10 +15,10 @@ app.config['SESSION_TYPE'] = 'filesystem'
 
 
 client = MongoClient(os.environ.get('MONGODB'))
-db = client.pruebasdb
+db = client.threatbox
 db_usr = db.usuarios
-db_fee = db.feeds
-feeds = db.pruebasdb['feeds']
+db_fee = db.fuentes
+feeds = db.threatbox['feeds']
 
 SEARCH_LIMIT = 100  # número máximo de resultados en las búsquedas
 
