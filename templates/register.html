@@ -3,16 +3,14 @@
 <article>
     <div class="content">
         <div id="acceso">
-            <form action="/register_user" method="post">
-                <label for="username">Nombre de Usuario</label></br>
-                <input type="text" placeholder="nombre de usuario" id="uname" name="uname"><br/>
-                <label for="contraseña">Email</label></br>
-                <input type="text" placeholder="email" id="email" name="email"><br/>
-                <label for="contraseña">Contraseña</label></br>
-                <input type="password" placeholder="contraseña" id="passw" name="passw"><br/>
-
-                <input type="submit" value="Registrarse" />
-                <p>Ya estás registrado?&nbsp;<a href="#">Sign in</a></p>
+            {% from "_formhelpers.html" import render_field %}
+            <form action="{{ url_for('register') }} " method="post">
+                {{ render_field(form.username) }}
+                {{ render_field(form.email) }}
+                {{ render_field(form.password) }}
+                {{ render_field(form.password2) }}
+                <input type=submit value=Registrarse>
+                <p>Ya estás registrado?&nbsp;<a href="{{ url_for('login') }}">Login</a></p>
             </form>
         </div>
     </div>

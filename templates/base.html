@@ -4,7 +4,7 @@
 <head>
     <meta lang="es" charset="utf-8">
     <title>ThreatBox_</title>
-    <link href="../static/main.css" rel="stylesheet" type="text/css" />
+    <link href="/static/main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -15,12 +15,13 @@
         </a>
         <nav>
             <ul>
-                <li><a href="/upload">repo</a></li>
-                <li><a href="/acceso">&#8635;&nbsp;&nbsp;login</a></li>
-                <li><a href="/register">sing up</a></li>
-                <li><a href="/about">about</a></li>
+                <li><a href="{{ url_for('buscar') }}">repositorio</a></li>
+                <li><a href="{{ url_for('upload') }}">Alta</a></li>
+                <li><a href="{{ url_for('login') }}">&#8635;&nbsp;&nbsp;login</a></li>
+                <li><a href="{{ url_for('register') }}">sing up</a></li>
+                <li><a href="{{ url_for('about') }}">about</a></li>
 				{% for dato in datos %}
-				<li>&#9762;&nbsp;&nbsp;{{ dato.uname }}</li>
+				<li>&#9762;&nbsp;&nbsp;{{ dato.name }}</li>
 				{% endfor %}
             </ul>
         </nav>

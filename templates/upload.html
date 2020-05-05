@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="content">
+    {% from "_formhelpers.html" import render_field %}
+    <form action="{{ url_for('upload') }}" method="post">
+        <div id="filas">
+            <div class="col col2">
+                {{ render_field(form.categoria) }}
+            </div>
+            <div class="col col2">
+                {{ render_field(form.subcategoria) }}
+            </div>
+        </div>
+        <div id="limpiado"></div>
+        <div id="filas">
+            <div class="col col2">
+                {{ render_field(form.fuente) }}
+            </div>
+            <div class="col col2">
+                {{ render_field(form.ubicacion) }}
+            </div>
+        </div>
+        <div id="limpiado"></div>
+        <div id="filas">
+            <div class="col col2">                
+                {{ render_field(form.direccion) }}
+            </div>
+        </div>
+        <div id="limpiado"></div>
+        <div id="filas">
+            <div class="col col3">
+                
+                {{ render_field(form.darknet) }}
+            </div>
+            <div class="col col3">               
+                {{ render_field(form.tipo) }}
+            </div>
+            <div class="col col3">   
+                {{ render_field(form.idioma) }}
+            </div>
+            <div id="limpiado"></div>
+            <div id="filas">
+                <div class="col col3">   
+                    {{ render_field(form.nivel) }}
+                </div>
+                <div class="col col3">   
+                    {{ render_field(form.invitacion) }}
+                </div>
+                <div class="col col3">                       
+                    {{ render_field(form.fiabilidad) }}
+                </div>
+            </div>
+        </div>
+        <div id="subir">
+            <input type="submit" name="mostrar" value="Guardar" />
+        </div>
+    </form>
+</article>
+{% endblock %}

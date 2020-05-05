@@ -8,12 +8,11 @@
                 <p><select name="categoria" id="categoria">
                         <option disabled="">Seleccionar categoría ...</option>
                         <option>&nbsp;</option>
-                        <option id="catTerro">Terrorismo</option>
-                        <option id="catLeak">Data Leak</option>
-                        <option id="catHack">Hacking</option>
+                        <option id="catCibame">Ciberamenaza</option>
                         <option id="catCibcri">Cibercrimen</option>
                         <option id="catFrau">Fraude</option>
-                        <option id="catCibame">Ciberamenazas</option>
+                        <option id="catHack">Hacking</option>
+                        <option id="catTerro">Terrorismo</option>
                     </select></p>
             </div>
             <div class="col col2">
@@ -21,12 +20,30 @@
                 <p><select name="subcategoria" id="subcategoria">
                         <option disabled="">Seleccionar subcategoría ...</option>
                         <option>&nbsp;</option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option>0day</option>
+                        <option>Actor estatal</option>
+                        <option>Armamento</option>
+                        <option>Armamento improvisado</option>
+                        <option>Ataque a equipos IoT</option>
+                        <option>Black Hack</option>
+                        <option>Botnet</option>
+                        <option>Ciberguerra</option>
+                        <option>Criptojacking</option>
+                        <option>Data Breach</option>
+                        <option>Data Leak</option>
+                        <option>Delincuencia organizada</option>
+                        <option>DDoS</option>
+                        <option>Drogas</option>
+                        <option>Extremismo de derechas</option>
+                        <option>Extremismo de izquierdas</option>
+                        <option>Hacktivismo</option>
+                        <option>Insiders</option>
+                        <option>Malware</option>
+                        <option>Milicia</option>
+                        <option>Phising</option>
+                        <option>Spam</option>
+                        <option>Whaling</option>
+                        <option>Yihad</option>
                     </select></p>
             </div>
         </div>
@@ -41,12 +58,18 @@
                 <p><select name="ubicacion" id="ubicacion">
                         <option disabled="">Introduzca ubicación de la fuente ...</option>
                         <option>&nbsp;</option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option>Blog</option>
+                        <option>Buscador</option>
+                        <option>Descargas</option>
+                        <option>Directorio</option>
+                        <option>Email Service</option>
+                        <option>Market</option>
+                        <option>Foro</option>
+                        <option>Hosting</option>
+                        <option>Noticias</option>
+                        <option>Telegram</option>
+                        <option>Web personal</option>
+                        <option>Wiki</option>
                     </select></p>
             </div>
         </div>
@@ -68,12 +91,16 @@
                 <p><select name="tipo">
                         <option disabled="">Tipo de darknet ...</option>
                         <option>&nbsp;</option>
-                        <option id="darkFree">Freenet</option>
-                        <option id="darkI2p">i2p</option>
-                        <option id="darkGnu">GNUnet</option>
-                        <option id="darkEntro">Entropy</option>
                         <option id="darkAnt">ANts P2P</option>
+                        <option id="darkEntro">Dissent</option>
+                        <option id="darkEntro">Entropy</option>
+                        <option id="darkFree">Freenet</option>
+                        <option id="darkGnu">GNUnet</option>
+                        <option id="darkMeta">Metanet</option>
+                        <option id="darkI2p">i2p</option>
+                        <option id="darkEntro">Riffle</option>
                         <option id="darkTor">Tor</option>
+                        <option id="darkZero">Zeroet</option>
                     </select></p>
             </div>
             <div class="col col3">
@@ -129,7 +156,7 @@
             </div>
         </div>
         <div id="subir">
-            <input type="submit" value="Subir" />
+            <input type="submit" name="mostrar" value="{{ mostrar }}" />
         </div>
     </form>
 </article>
