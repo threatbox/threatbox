@@ -27,22 +27,26 @@ class FuenteForm(Form):
         'Categoría',
         choices=(
             (None, 'Selecciona...'),
-            ('Terrorismo', 'Terrorismo'),
-            ('Hacking', 'Hacking'),
+            ('Ciberamenaza', 'Ciberamenaza'),
             ('Cibercrimen', 'Cibercrimen'),
             ('Fraude', 'Fraude'),
-            ('Ciberamenaza', 'Ciberamenaza'),
+            ('Hacking', 'Hacking'),
+            ('Terrorismo', 'Terrorismo'),
         )
     )
     subcategoria = SelectField(
         'Sub-Categoría',
         choices=(
             (None, 'Selecciona...'),
+            ('0day', '0day'),
             ('Actor estatal', 'Actor estatal'),
             ('Armamento', 'Armamento'),
             ('Armamento improvisado', 'Armamento improvisado'),
+            ('Ataque a equipos IoT', 'Ataque a equipos IoT'),
+            ('Black Hack', 'Black Hack'),
             ('Botnet', 'Botnet'),
             ('Ciberguerra', 'Ciberguerra'),
+            ('Criptodivisas', 'Criptodivisas'),
             ('Criptojacking', 'Criptojacking'),
             ('Data Breach', 'Data Breach'),
             ('Data Leak', 'Data Leak'),
@@ -52,9 +56,13 @@ class FuenteForm(Form):
             ('Extremismo de derechas', 'Extremismo de derechas'),
             ('Extremismo de izquierdas', 'Extremismo de izquierdas'),
             ('Hacktivismo', 'Hacktivismo'),
+            ('Insiders', 'Insiders'),
+            ('Malware', 'Malware'),
             ('Milicia', 'Milicia'),
             ('Phising', 'Phising'),
             ('Spam', 'Spam'),
+            ('Tarjetas de crédito', 'Tarjetas de crédito'),
+            ('Whaling', 'Whaling'),
             ('Yihad', 'Yihad'),
         )
     )
@@ -67,8 +75,13 @@ class FuenteForm(Form):
             ('Buscador', 'Buscador'),
             ('Descargas', 'Descargas'),
             ('Directorio', 'Directorio'),
+            ('Email Service', 'Email Service'),
+            ('Market', 'Market'),
             ('Ecommerce', 'Ecommerce'),
             ('Foro', 'Foro'),
+            ('Hosting', 'Hosting'),
+            ('Noticias', 'Noticias'),
+            ('Telegram', 'Telegram'),
             ('Web personal', 'Web personal'),
             ('Wiki', 'Wiki'),
         )
@@ -86,11 +99,13 @@ class FuenteForm(Form):
         choices=(
             (None, 'Selecciona...'),
             ('darkAnt', 'ANts P2P'),
+            ('darkDiss', 'Dissent'),
             ('darkEntro', 'Entropy'),
             ('darkFree', 'Freenet'),
             ('darkGnu', 'GNUnet'),
             ('darkMeta', 'Metanet'),
             ('darkI2p', 'i2p'),
+            ('darkRiff', 'Riffle'),
             ('darkTor', 'Tor'),
             ('darkZero', 'Zeroet'),
         )
