@@ -3,3 +3,4 @@ bcrypt
 pymongo
 wtforms
 email_validator
+flask-paginate

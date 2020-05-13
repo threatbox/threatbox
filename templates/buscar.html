@@ -16,15 +16,32 @@
     <div class="content">
         <form action="{{ url_for('buscar') }}" method="GET">
             <div id="buscador">
-                <input type="text" name="busca" value="{{ busca }}" /><input type="submit" value="SEARCH" />
+                <input type="text" name="busca" value="{{ busca }}" autofocus="true" /><input type="submit" value="SEARCH" />
             </div>
         </form>
-
-        <ul>
+        {% if total %}
+        <table id="tablabusca">
+            <thead>
+                <tr>
+                    <th>Direccion</th>
+                    <th>Fuente</th>
+                    <th>Categoría</th>
+                    <th>Subcategoría</th>
+                </tr>
+            </thead>
+            <tbody>
             {% for dato in datos %}
-            <li>{{ dato.fuente }}, {{dato.categoria}}, {{dato.subcategoria}}</li>
+                <tr>
+                    <td><a href="{{url_for('ficha', id=dato._id)}}">{{ dato.direccion }}</a></td>
+                    <td><a href="{{url_for('ficha', id=dato._id)}}">{{ dato.fuente }}</a></td>
+                    <td><a href="{{url_for('ficha', id=dato._id)}}">{{ dato.categoria }}</a></td>
+                    <td><a href="{{url_for('ficha', id=dato._id)}}">{{ dato.subcategoria }}</a></td>
+                </tr>
             {% endfor %}
-        </ul>
+            </tbody>
+        </table>
+        {% endif %}
+        {{ pagination.links }}
     </div>
 </article>
 {% endblock %}

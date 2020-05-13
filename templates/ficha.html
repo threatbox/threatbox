@@ -1,4 +1,55 @@
 {% extends "base.html" %}
+
+
 {% block content %}
-    ... {{fee.categoria}} ...
+<div class="content">
+    <table id="tablamuestra">
+        <tr>
+            <th>Fuente:</th>
+            <td>{{fee.fuente}}</td>
+        </tr>
+        <tr>
+            <th>Categoría:</th>
+            <td>{{fee.categoria}}</td>
+        </tr>
+        <tr>
+            <th>Subcategoría:</th>
+            <td>{{fee.subcategoria}}</td>
+        </tr>
+        <tr>
+            <th>Ubicación de la fuente:</th>
+            <td>{{fee.ubicacion}}</td>
+        </tr>
+        <tr>
+            <th>Dirección:</th>
+            <td><a href="{{fee.direccion}}" target="_blank">{{fee.direccion}}</a></td>
+        </tr>
+        <tr>
+            <th>Darknet:</th>
+            <td>{{fee.darknet}}</td>
+        </tr>
+        <tr>
+            <th>Tipo Darknet:</th>
+            <td>{{fee.tipo}}</td>
+        </tr>
+        <tr>
+            <th>Idioma:</th>
+            <td>{{fee.idioma}}</td>
+        </tr>
+        <tr>
+            <th>Nivel:</th>
+            <td>{{fee.nivel}}</td>
+        </tr>
+        <tr>
+            <th>Invitación:</th>
+            <td>{{fee.invitacion}}</td>
+        </tr>
+        <tr>
+            <th>Fiabilidad:</th>
+            <td>{{fee.fiabilidad}}</td>
+        </tr>
+    </table>
+
+    <a href="{{url_for('buscar')}}">Seguir buscando</a>
+</div>
 {% endblock %}
