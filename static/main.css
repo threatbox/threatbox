@@ -81,11 +81,14 @@ nav ul li a:hover {
     padding: 40px;
 }
 #main-content header h1{color: #cc0000; font-size: 27px;}
+#main-content h2{color: #333; text-align: center;}
+#main-content h3{color: #cc0000; text-align: center; font-weight: 500;}
 
 #buscador{
     width: 700px;
     margin: auto;
-    padding-top: 25%;
+    padding-top: 20%;
+    padding-bottom: 5%;
 }
 
 #buscador input[type=text]{
@@ -193,7 +196,7 @@ select::-ms-expand {display: none; /*Evita que se muestre la flecha por defecto 
     width: 97%;
     border-radius: 5px;
     padding: 8px 11px;
-    margin-top: 0px;
+    margin-top: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
@@ -294,30 +297,6 @@ select::-ms-expand {display: none; /*Evita que se muestre la flecha por defecto 
     font-weight: lighter;
 }
 
-/*
- * Mostrar fuentes
- */
- #fuentes {
-     margin: 0;
-    /*float: right;*/
-}
-#fuentes ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    padding-right: 50px;
-}
-#fuentes ul li {
-    list-style: none;
-    font-weight: bold;
-    line-height: 33px;
-}
-#fuentes ul li span {
-    font-weight: lighter;
-    font-size: 90%;
-    text-transform: uppercase;
-}
-
 .banner {
   padding: 0em 5em;
   font: lighter 40px/50px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
@@ -402,6 +381,10 @@ select::-ms-expand {display: none; /*Evita que se muestre la flecha por defecto 
 
 #limpiado{clear: both;}
 
+/*
+ * Mostrar fuentes
+ */
+
 /* https://pythonhosted.org/Flask-paginate/ */
 .pagination ul {
     list-style: none;
@@ -483,3 +466,24 @@ select::-ms-expand {display: none; /*Evita que se muestre la flecha por defecto 
     text-transform: uppercase;
     font-size: 11px;;
 }
+
+#boton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 7px;
+    width: 150px;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+}
+#boton:hover {
+    color: #cc0000;
+}
+
+ul {list-style: none;}

@@ -101,7 +101,7 @@ def register():
                 'email': form.email.data
             })
             session['name'] = form.username.data
-            return redirect(url_for('user_up'))
+            return redirect(url_for('upload'))
         else:
             form.username.errors.append('El usuario ya existe')
 

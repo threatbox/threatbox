@@ -3,6 +3,8 @@
 
 {% block content %}
 <div class="content">
+    <h2>Catalogación de la fuente</h2>
+    <h3>{{fee.fuente}}</h3>
     <table id="tablamuestra">
         <tr>
             <th>Fuente:</th>
@@ -21,7 +23,7 @@
             <td>{{fee.ubicacion}}</td>
         </tr>
         <tr>
-            <th>Dirección:</th>
+            <th>URL:</th>
             <td><a href="{{fee.direccion}}" target="_blank">{{fee.direccion}}</a></td>
         </tr>
         <tr>
@@ -37,7 +39,7 @@
             <td>{{fee.idioma}}</td>
         </tr>
         <tr>
-            <th>Nivel:</th>
+            <th>Nivel de actividad:</th>
             <td>{{fee.nivel}}</td>
         </tr>
         <tr>
@@ -45,11 +47,12 @@
             <td>{{fee.invitacion}}</td>
         </tr>
         <tr>
-            <th>Fiabilidad:</th>
+            <th>Score de fiabilidad:</th>
             <td>{{fee.fiabilidad}}</td>
         </tr>
     </table>
 
-    <a href="{{url_for('buscar')}}">Seguir buscando</a>
+    <a id="boton" href="{{url_for('buscar')}}">Buscar</a>
+    <a id="boton" href="{{url_for('register')}}">Catalogar</a>
 </div>
 {% endblock %}

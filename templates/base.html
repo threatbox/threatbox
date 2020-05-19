@@ -18,10 +18,10 @@
             <ul>
                 <li><a href="{{ url_for('upload') }}">repositorio</a></li>
                 {% if session.name %}
-                    <li><a href="{{ url_for('logout') }}">logout {{ session.name }}</a></li>
+                    <li><a href="{{ url_for('logout') }}">logout&nbsp;&nbsp;<i class="fas fa-user-circle"></i>&nbsp;<span style="color:#cc0000;font-weight:bold;font-size:14px;">{{ session.name }}</span></a></li>
                 {% else %}
-                    <li><a href="{{ url_for('login') }}"><i class="fas fa-biohazard"></i> login</a></li>
-                    <li><a href="{{ url_for('register') }}">sing up</a></li>
+                    <li><a href="{{ url_for('login') }}"><i class="far fa-user-circle"></i>&nbsp;login</a></li>
+                    <li><a href="{{ url_for('register') }}"><i class="fas fa-sign-in-alt"></i>&nbsp;sign up</a></li>
                 <li><a href="{{ url_for('about') }}">about</a></li>
                 {% endif %}
             </ul>
